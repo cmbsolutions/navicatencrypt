@@ -2,22 +2,25 @@
 
   <PropertyGroup>
     <RootNamespace>NavicatEncrypt.Core</RootNamespace>
-    <TargetFramework>net5.0</TargetFramework>
+    <TargetFramework>net7.0</TargetFramework>
     <OptionStrict>On</OptionStrict>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Authors>Maurice Beckman</Authors>
     <Company>CMBSolutions</Company>
     <Description>Encrypt and decrypt Navicat passwords stored in registry</Description>
-    <RepositoryUrl>https://bitbucket.org/cmbsolutions/navicatencrypt/src/master/</RepositoryUrl>
+    <RepositoryUrl>https://github.com/cmbsolutions/navicatencrypt</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
-    <PackageReleaseNotes>.NET 5 version for multiplatform</PackageReleaseNotes>
+    <PackageReleaseNotes>.NET 7 version</PackageReleaseNotes>
     <PackageProjectUrl>https://bitbucket.org/cmbsolutions/navicatencrypt/src/</PackageProjectUrl>
+    <AssemblyVersion>1.0.2</AssemblyVersion>
+    <FileVersion>1.0.2</FileVersion>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <NoWarn />
     <WarningsAsErrors>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</WarningsAsErrors>
     <DocumentationFile></DocumentationFile>
+    <DebugType>embedded</DebugType>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
@@ -25,11 +28,11 @@
     <WarningsAsErrors>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</WarningsAsErrors>
     <DocumentationFile></DocumentationFile>
     <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
+    <DebugType>embedded</DebugType>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="CryptSharp.Core" Version="2.0.0" />
+    <PackageReference Include="CryptSharp.Core" Version="3.0.0" />
   </ItemGroup>
 
   <ItemGroup>
