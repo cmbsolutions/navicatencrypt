@@ -1,0 +1,40 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <RootNamespace>NavicatEncrypt.Core</RootNamespace>
+    <TargetFramework>net5.0</TargetFramework>
+    <OptionStrict>On</OptionStrict>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Authors>Maurice Beckman</Authors>
+    <Company>CMBSolutions</Company>
+    <Description>Encrypt and decrypt Navicat passwords stored in registry</Description>
+    <RepositoryUrl>https://bitbucket.org/cmbsolutions/navicatencrypt/src/master/</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageReleaseNotes>.NET 5 version for multiplatform</PackageReleaseNotes>
+    <PackageProjectUrl>https://bitbucket.org/cmbsolutions/navicatencrypt/src/</PackageProjectUrl>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <NoWarn />
+    <WarningsAsErrors>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</WarningsAsErrors>
+    <DocumentationFile></DocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <NoWarn />
+    <WarningsAsErrors>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</WarningsAsErrors>
+    <DocumentationFile></DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CryptSharp.Core" Version="2.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Import Include="CryptSharp.Core" />
+    <Import Include="CryptSharp.Core.Utility" />
+  </ItemGroup>
+
+</Project>
