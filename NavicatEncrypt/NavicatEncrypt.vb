@@ -1,6 +1,6 @@
 ﻿Imports System.Security.Cryptography
 Imports System.Text
-Imports CryptSharp
+Imports CryptSharpSlim
 
 ''' <summary>
 ''' NavicatEncrypt will encrypt and decrypt the database passwords stored in the registry used by Navicat.
