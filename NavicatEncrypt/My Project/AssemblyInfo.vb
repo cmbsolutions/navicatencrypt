@@ -12,7 +12,7 @@ Imports System.Runtime.InteropServices
 <Assembly: AssemblyDescription("Encrypt and decrypt navicat stored passwords")>
 <Assembly: AssemblyCompany("CMBSolutions")>
 <Assembly: AssemblyProduct("NavicatEncrypt")>
-<Assembly: AssemblyCopyright("Copyright © CMBSolutions 2017 - 2023")>
+<Assembly: AssemblyCopyright("Copyright © CMBSolutions 2017 - 2024")>
 <Assembly: AssemblyTrademark("")>
 
 <Assembly: ComVisible(False)>
@@ -31,5 +31,5 @@ Imports System.Runtime.InteropServices
 ' by using the '*' as shown below:
 ' <Assembly: AssemblyVersion("1.0.*")>
 
-<Assembly: AssemblyVersion("1.3.0.0")>
-<Assembly: AssemblyFileVersion("1.3.0.0")>
+<Assembly: AssemblyVersion("1.3.1.0")>
+<Assembly: AssemblyFileVersion("1.3.1.0")>
