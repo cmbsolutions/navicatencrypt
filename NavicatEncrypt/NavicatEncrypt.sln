@@ -7,6 +7,8 @@ Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "NavicatEncrypt", "NavicatEn
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CryptSharpSlim", "..\CryptSharpSlim\CryptSharpSlim.csproj", "{DC190EE3-572E-451D-82C1-DC11CE292CE0}"
 EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "NavicatEncrypt.Standard", "..\NavicatEncrypt.Standard\NavicatEncrypt.Standard.vbproj", "{0F7A68EB-CD00-472E-8E62-43213489EB57}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{DC190EE3-572E-451D-82C1-DC11CE292CE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DC190EE3-572E-451D-82C1-DC11CE292CE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DC190EE3-572E-451D-82C1-DC11CE292CE0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F7A68EB-CD00-472E-8E62-43213489EB57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F7A68EB-CD00-472E-8E62-43213489EB57}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F7A68EB-CD00-472E-8E62-43213489EB57}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F7A68EB-CD00-472E-8E62-43213489EB57}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
