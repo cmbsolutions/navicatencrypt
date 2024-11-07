@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <RootNamespace>NavicatEncrypt.Core</RootNamespace>
-    <TargetFramework>net7.0</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
     <OptionStrict>On</OptionStrict>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Authors>Maurice Beckman</Authors>
@@ -10,10 +10,14 @@
     <Description>Encrypt and decrypt Navicat passwords stored in registry</Description>
     <RepositoryUrl>https://github.com/cmbsolutions/navicatencrypt</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
-    <PackageReleaseNotes>.NET 7 version</PackageReleaseNotes>
-    <PackageProjectUrl>https://bitbucket.org/cmbsolutions/navicatencrypt/src/</PackageProjectUrl>
-    <AssemblyVersion>1.0.2</AssemblyVersion>
-    <FileVersion>1.0.2</FileVersion>
+    <PackageReleaseNotes>.NET 8 version
+Removed CryptSharp dependency</PackageReleaseNotes>
+    <PackageProjectUrl>https://github.com/cmbsolutions/navicatencrypt</PackageProjectUrl>
+    <AssemblyVersion>1.3.2</AssemblyVersion>
+    <FileVersion>1.3.2</FileVersion>
+    <Title>NavicatEncrypt.Core</Title>
+    <Version>1.3.2</Version>
+    <ImportedNamespaces>Microsoft.VisualBasic=True,System=True,System.Collections=True,System.Collections.Generic=True,System.Diagnostics=True,System.Linq=True,System.Xml.Linq=True,System.Threading.Tasks=True,NavicatEncrypt.Core=True</ImportedNamespaces>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -32,12 +36,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="CryptSharp.Core" Version="3.0.0" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Import Include="CryptSharp.Core" />
-    <Import Include="CryptSharp.Core.Utility" />
+    <ProjectReference Include="..\CryptSharpSlim.Core\CryptSharpSlim.Core.csproj" />
   </ItemGroup>
 
 </Project>

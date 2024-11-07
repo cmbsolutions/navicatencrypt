@@ -1,5 +1,7 @@
 Imports System.Security.Cryptography
 Imports System.Text
+Imports System.Text.RegularExpressions
+Imports CryptSharpSlim.Utility
 ''' <summary>
 ''' NavicatEncrypt will encrypt and decrypt the database passwords stored in the registry used by Navicat.
 '''
@@ -9,7 +11,6 @@ Imports System.Text
 ''' You may use this code in any way as you see fit but give at least credits to the original creator
 ''' 
 ''' Ported by: CMBSolutions
-''' Dependencies: CryptSharp.Core by Costin Banu https://github.com/costinbanu/CryptSharp.Core 
 ''' </summary>
 Public Class NavicatEncrypt
     Implements IDisposable
@@ -21,17 +22,37 @@ Public Class NavicatEncrypt
 
     Public Sub New()
         Try
-            InitCipher()
+            InitCipher(NavicatCode)
             InitIV()
         Catch ex As Exception
             Throw
         End Try
     End Sub
 
-    Private Sub InitCipher()
+    ''' <summary>
+    ''' Encrypt and decrypt with a custom key.
+    ''' </summary>
+    ''' <param name="CustomCode">
+    ''' A four byte hexadecimal string (e.g. 62797465)
+    ''' If a wrong formatted string is given, the default NavicatCode will be used
+    ''' </param>
+    Public Sub New(CustomCode As String)
+        Try
+            If Regex.IsMatch(CustomCode, "\A^[0-9A-F]{8}$\z", RegexOptions.IgnoreCase Or RegexOptions.Singleline Or RegexOptions.Multiline) Then
+                InitCipher(CustomCode)
+            Else
+                InitCipher(NavicatCode)
+            End If
+
+            InitIV()
+        Catch ex As Exception
+            Throw
+        End Try
+    End Sub
+    Private Sub InitCipher(code As String)
         Try
             Using hasher As SHA1 = SHA1.Create
-                _key = hasher.ComputeHash(Encoding.ASCII.GetBytes(NavicatCode))
+                _key = hasher.ComputeHash(Encoding.ASCII.GetBytes(code))
                 _cipher = BlowfishCipher.Create(_key)
             End Using
         Catch ex As Exception
