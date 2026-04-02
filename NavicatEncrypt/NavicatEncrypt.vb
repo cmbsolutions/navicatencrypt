@@ -149,11 +149,7 @@ Public Class NavicatEncrypt
 
     Public Function Decrypt(hexString As String) As String
         Try
-            Dim inData(Convert.ToInt32(hexString.Length / 2) - 1) As Byte
-
-            For i As Integer = 0 To Convert.ToInt32(hexString.Length / 2) - 1
-                inData(i) = CByte("&H" & hexString.Substring(i * 2, 2))
-            Next
+            Dim inData As Byte() = NavicatHelpers.HexToBytes(hexString)
 
             Dim outData As Byte() = Decrypt(inData)
 

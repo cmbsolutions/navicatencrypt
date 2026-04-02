@@ -14,3 +14,5 @@ echo "Plaintext: @HallOD1t1seenlangWachtwoord!<br>";
 echo "Encrypted: " . $encrypter->Encrypt('@HallOD1t1seenlangWachtwoord!') . "<br>";
 echo "Encrypted: 81AB926F5FC6AEEFA5E4F38634591B0A8C3DD58641DE3967A127D2<br>";
 echo "Plaintext: " . $encrypter->Decrypt('81AB926F5FC6AEEFA5E4F38634591B0A8C3DD58641DE3967A127D2') . "<br>";
+echo "Plaintext: " . $encrypter->Decrypt('B1E896FB54398FF186CFBC08') . "<br>";
+echo "Plaintext: " . $encrypter->Decrypt('04FC6F05DD5221230FFAE0D6') . "<br>";
