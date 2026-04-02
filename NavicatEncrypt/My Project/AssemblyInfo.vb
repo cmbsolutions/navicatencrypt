@@ -9,10 +9,10 @@ Imports System.Runtime.InteropServices
 ' Review the values of the assembly attributes
 
 <Assembly: AssemblyTitle("NavicatEncrypt")>
-<Assembly: AssemblyDescription("Encrypt and decrypt navicat stored passwords")>
+<Assembly: AssemblyDescription("Encrypt and decrypt navicat stored passwords v1, v2 & v3")>
 <Assembly: AssemblyCompany("CMBSolutions")>
 <Assembly: AssemblyProduct("NavicatEncrypt")>
-<Assembly: AssemblyCopyright("Copyright © CMBSolutions 2017 - 2025")>
+<Assembly: AssemblyCopyright("Copyright © CMBSolutions 2017 - 2026")>
 <Assembly: AssemblyTrademark("")>
 
 <Assembly: ComVisible(False)>
@@ -31,5 +31,5 @@ Imports System.Runtime.InteropServices
 ' by using the '*' as shown below:
 ' <Assembly: AssemblyVersion("1.0.*")>
 
-<Assembly: AssemblyVersion("1.3.2.0")>
-<Assembly: AssemblyFileVersion("1.3.2.0")>
+<Assembly: AssemblyVersion("2.0.0.0")>
+<Assembly: AssemblyFileVersion("2.0.0.0")>
